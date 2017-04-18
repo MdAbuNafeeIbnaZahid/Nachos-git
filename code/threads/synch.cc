@@ -137,7 +137,7 @@ void Lock::Release()
     if (thread != NULL)	   // make thread ready, consuming the V immediately
 	scheduler->ReadyToRun(thread);
     isLocked = 0;
-    
+    currentLockHolder = NULL;
     
     interrupt->SetLevel(oldLevel);
 }
