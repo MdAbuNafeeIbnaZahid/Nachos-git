@@ -88,6 +88,10 @@ class Lock {
   private:
     const char* name;				// para depuraci�n
     // a�adir aqu� otros campos que sean necesarios
+    
+    //Added by Nafee
+    int isLocked;        		
+    List<Thread*> *queue; 
 };
 
 //  La siguiente clase define una "variable condici�n". Una variable condici�n
