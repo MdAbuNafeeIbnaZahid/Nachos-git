@@ -142,6 +142,11 @@ void Lock::Release()
     interrupt->SetLevel(oldLevel);
 }
 
+bool Lock::isHeldByCurrentThread()
+{
+    return (currentThread == currentLockHolder);
+}
+
 Condition::Condition(const char* debugName, Lock* conditionLock) { }
 Condition::~Condition() { }
 void Condition::Wait() { ASSERT(false); }
