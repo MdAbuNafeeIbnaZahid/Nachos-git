@@ -107,8 +107,23 @@ Lock::Lock(const char* debugName)
     isLocked = 0;
     queue = new List<Thread*>;
 }
-Lock::~Lock() {}
-void Lock::Acquire() {}
+Lock::~Lock() 
+{
+    delete queue;
+}
+void Lock::Acquire() 
+{
+    IntStatus oldLevel = interrupt->SetLevel(IntOff);	// disable interrupts
+    
+    while (isLocked ) { 			// lock not available
+	queue->Append(currentThread);		// so go to sleep
+	currentThread->Sleep();
+    } 
+    isLocked = 1;				// lock available, 
+						// acquire it
+    
+    interrupt->SetLevel(oldLevel);
+}
 void Lock::Release() {}
 
 Condition::Condition(const char* debugName, Lock* conditionLock) { }
