@@ -113,6 +113,7 @@ Lock::~Lock()
 }
 void Lock::Acquire() 
 {
+    // Implemented by Nafee
     IntStatus oldLevel = interrupt->SetLevel(IntOff);	// disable interrupts
     
     while (isLocked ) { 			// lock not available
@@ -121,10 +122,25 @@ void Lock::Acquire()
     } 
     isLocked = 1;				// lock available, 
 						// acquire it
+    currentLockHolder = currentThread;
     
     interrupt->SetLevel(oldLevel);
 }
-void Lock::Release() {}
+
+void Lock::Release() 
+{
+    ASSERT(currentThread == currentLockHolder);
+    Thread *thread;
+    IntStatus oldLevel = interrupt->SetLevel(IntOff);
+
+    thread = queue->Remove();
+    if (thread != NULL)	   // make thread ready, consuming the V immediately
+	scheduler->ReadyToRun(thread);
+    isLocked = 0;
+    
+    
+    interrupt->SetLevel(oldLevel);
+}
 
 Condition::Condition(const char* debugName, Lock* conditionLock) { }
 Condition::~Condition() { }

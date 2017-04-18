@@ -92,6 +92,7 @@ class Lock {
     //Added by Nafee
     int isLocked;        		
     List<Thread*> *queue; 
+    Thread *currentLockHolder;
 };
 
 //  La siguiente clase define una "variable condici�n". Una variable condici�n
