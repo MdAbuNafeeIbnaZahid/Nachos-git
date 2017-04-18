@@ -1,0 +1,234 @@
+cd threads; make depend
+make[1]: Entering directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/threads'
+g++ -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -M ../threads/main.cc ../threads/scheduler.cc ../threads/synch.cc ../threads/system.cc ../threads/thread.cc ../threads/utility.cc ../threads/threadtest.cc ../machine/interrupt.cc ../machine/sysdep.cc ../machine/stats.cc ../machine/timer.cc ../threads/preemptive.cc > makedep
+echo '/^# DO NOT DELETE THIS LINE/+2,$d' >eddep
+echo '$r makedep' >>eddep
+echo 'wq' >>eddep
+ed - Makefile < eddep
+rm eddep makedep 
+echo '# DEPENDENCIES MUST END AT END OF FILE' >> Makefile
+echo '# IF YOU PUT STUFF HERE IT WILL GO AWAY' >> Makefile
+echo '# see make depend above' >> Makefile
+make[1]: Leaving directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/threads'
+cd threads; make nachos
+make[1]: Entering directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/threads'
+g++ -g -Wall -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/main.cc
+g++ -g -Wall -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/scheduler.cc
+g++ -g -Wall -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/synch.cc
+g++ -g -Wall -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/system.cc
+g++ -g -Wall -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/thread.cc
+g++ -g -Wall -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/utility.cc
+g++ -g -Wall -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/threadtest.cc
+g++ -g -Wall -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/interrupt.cc
+g++ -g -Wall -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/stats.cc
+g++ -g -Wall -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/sysdep.cc
+g++ -g -Wall -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/timer.cc
+g++ -g -Wall -Wshadow -I../threads -I../machine -DTHREADS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/preemptive.cc
+gcc -x assembler-with-cpp -c -P -I../threads -I../machine -DHOST_x86_64 -DHOST_LINUX ../threads/switch.s > swtch.s
+g++ main.o scheduler.o synch.o system.o thread.o utility.o threadtest.o interrupt.o stats.o sysdep.o timer.o preemptive.o switch.o  -o nachos
+make[1]: Leaving directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/threads'
+cd userprog; make depend 
+make[1]: Entering directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/userprog'
+g++ -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -M ../threads/main.cc ../threads/scheduler.cc ../threads/synch.cc ../threads/system.cc ../threads/thread.cc ../threads/utility.cc ../threads/threadtest.cc ../machine/interrupt.cc ../machine/sysdep.cc ../machine/stats.cc ../machine/timer.cc ../threads/preemptive.cc ../userprog/addrspace.cc ../userprog/bitmap.cc ../userprog/exception.cc ../userprog/progtest.cc ../machine/console.cc ../machine/machine.cc ../machine/mipssim.cc ../machine/translate.cc > makedep
+echo '/^# DO NOT DELETE THIS LINE/+2,$d' >eddep
+echo '$r makedep' >>eddep
+echo 'wq' >>eddep
+ed - Makefile < eddep
+rm eddep makedep 
+echo '# DEPENDENCIES MUST END AT END OF FILE' >> Makefile
+echo '# IF YOU PUT STUFF HERE IT WILL GO AWAY' >> Makefile
+echo '# see make depend above' >> Makefile
+make[1]: Leaving directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/userprog'
+cd userprog; make nachos 
+make[1]: Entering directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/userprog'
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/main.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/scheduler.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/synch.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/system.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/thread.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/utility.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/threadtest.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/interrupt.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/stats.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/sysdep.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/timer.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/preemptive.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/addrspace.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/bitmap.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/exception.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/progtest.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/console.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/machine.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/mipssim.cc
+g++ -g -Wall -Wshadow -I../bin -I../filesys -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DFILESYS_NEEDED -DFILESYS_STUB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/translate.cc
+gcc -x assembler-with-cpp -c -P -I../bin -I../filesys -I../userprog -I../threads -I../machine -DHOST_x86_64 -DHOST_LINUX ../threads/switch.s > swtch.s
+g++ main.o scheduler.o synch.o system.o thread.o utility.o threadtest.o interrupt.o stats.o sysdep.o timer.o preemptive.o addrspace.o bitmap.o exception.o progtest.o console.o machine.o mipssim.o translate.o switch.o  -o nachos
+make[1]: Leaving directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/userprog'
+cd vm; make depend
+make[1]: Entering directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/vm'
+g++ -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -M ../threads/main.cc ../threads/scheduler.cc ../threads/synch.cc ../threads/system.cc ../threads/thread.cc ../threads/utility.cc ../threads/threadtest.cc ../machine/interrupt.cc ../machine/sysdep.cc ../machine/stats.cc ../machine/timer.cc ../threads/preemptive.cc ../userprog/addrspace.cc ../userprog/bitmap.cc ../userprog/exception.cc ../userprog/progtest.cc ../machine/console.cc ../machine/machine.cc ../machine/mipssim.cc ../machine/translate.cc  > makedep
+echo '/^# DO NOT DELETE THIS LINE/+2,$d' >eddep
+echo '$r makedep' >>eddep
+echo 'wq' >>eddep
+ed - Makefile < eddep
+rm eddep makedep 
+echo '# DEPENDENCIES MUST END AT END OF FILE' >> Makefile
+echo '# IF YOU PUT STUFF HERE IT WILL GO AWAY' >> Makefile
+echo '# see make depend above' >> Makefile
+make[1]: Leaving directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/vm'
+cd vm; make nachos 
+make[1]: Entering directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/vm'
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/main.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/scheduler.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/synch.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/system.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/thread.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/utility.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/threadtest.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/interrupt.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/stats.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/sysdep.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/timer.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/preemptive.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/addrspace.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/bitmap.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/exception.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/progtest.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/console.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/machine.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/mipssim.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM  -DFILESYS_NEEDED -DFILESYS_STUB -DVM -DUSE_TLB -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/translate.cc
+gcc -x assembler-with-cpp -c -P -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DHOST_x86_64 -DHOST_LINUX ../threads/switch.s > swtch.s
+g++ main.o scheduler.o synch.o system.o thread.o utility.o threadtest.o interrupt.o stats.o sysdep.o timer.o preemptive.o addrspace.o bitmap.o exception.o progtest.o console.o machine.o mipssim.o translate.o  switch.o  -o nachos
+make[1]: Leaving directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/vm'
+cd filesys; make depend
+make[1]: Entering directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/filesys'
+g++ -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -M ../threads/main.cc ../threads/scheduler.cc ../threads/synch.cc ../threads/system.cc ../threads/thread.cc ../threads/utility.cc ../threads/threadtest.cc ../machine/interrupt.cc ../machine/sysdep.cc ../machine/stats.cc ../machine/timer.cc ../threads/preemptive.cc ../userprog/addrspace.cc ../userprog/bitmap.cc ../userprog/exception.cc ../userprog/progtest.cc ../machine/console.cc ../machine/machine.cc ../machine/mipssim.cc ../machine/translate.cc  ../filesys/directory.cc ../filesys/filehdr.cc ../filesys/filesys.cc ../filesys/fstest.cc ../filesys/openfile.cc ../filesys/synchdisk.cc ../machine/disk.cc > makedep
+echo '/^# DO NOT DELETE THIS LINE/+2,$d' >eddep
+echo '$r makedep' >>eddep
+echo 'wq' >>eddep
+ed - Makefile < eddep
+rm eddep makedep 
+echo '# DEPENDENCIES MUST END AT END OF FILE' >> Makefile
+echo '# IF YOU PUT STUFF HERE IT WILL GO AWAY' >> Makefile
+echo '# see make depend above' >> Makefile
+make[1]: Leaving directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/filesys'
+cd filesys; make nachos 
+make[1]: Entering directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/filesys'
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/main.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/scheduler.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/synch.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/system.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/thread.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/utility.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/threadtest.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/interrupt.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/stats.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/sysdep.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/timer.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/preemptive.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/addrspace.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/bitmap.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/exception.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/progtest.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/console.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/machine.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/mipssim.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/translate.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../filesys/directory.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../filesys/filehdr.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../filesys/filesys.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../filesys/fstest.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../filesys/openfile.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../filesys/synchdisk.cc
+g++ -g -Wall -Wshadow -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DTHREADS -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/disk.cc
+gcc -x assembler-with-cpp -c -P -I../filesys -I../bin -I../vm -I../userprog -I../threads -I../machine -DHOST_x86_64 -DHOST_LINUX ../threads/switch.s > swtch.s
+g++ main.o scheduler.o synch.o system.o thread.o utility.o threadtest.o interrupt.o stats.o sysdep.o timer.o preemptive.o addrspace.o bitmap.o exception.o progtest.o console.o machine.o mipssim.o translate.o  directory.o filehdr.o filesys.o fstest.o openfile.o synchdisk.o disk.o switch.o  -o nachos
+make[1]: Leaving directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/filesys'
+cd network; make depend
+make[1]: Entering directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/network'
+g++ -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -M ../threads/main.cc ../threads/scheduler.cc ../threads/synch.cc ../threads/system.cc ../threads/thread.cc ../threads/utility.cc ../threads/threadtest.cc ../machine/interrupt.cc ../machine/sysdep.cc ../machine/stats.cc ../machine/timer.cc ../threads/preemptive.cc ../userprog/addrspace.cc ../userprog/bitmap.cc ../userprog/exception.cc ../userprog/progtest.cc ../machine/console.cc ../machine/machine.cc ../machine/mipssim.cc ../machine/translate.cc  ../filesys/directory.cc ../filesys/filehdr.cc ../filesys/filesys.cc ../filesys/fstest.cc ../filesys/openfile.cc ../filesys/synchdisk.cc ../machine/disk.cc ../network/nettest.cc ../network/post.cc ../machine/network.cc > makedep
+echo '/^# DO NOT DELETE THIS LINE/+2,$d' >eddep
+echo '$r makedep' >>eddep
+echo 'wq' >>eddep
+ed - Makefile < eddep
+rm eddep makedep 
+echo '# DEPENDENCIES MUST END AT END OF FILE' >> Makefile
+echo '# IF YOU PUT STUFF HERE IT WILL GO AWAY' >> Makefile
+echo '# see make depend above' >> Makefile
+make[1]: Leaving directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/network'
+cd network; make nachos 
+make[1]: Entering directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/network'
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/main.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/scheduler.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/synch.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/system.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/thread.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/utility.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/threadtest.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/interrupt.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/stats.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/sysdep.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/timer.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../threads/preemptive.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/addrspace.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/bitmap.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/exception.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../userprog/progtest.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/console.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/machine.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/mipssim.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/translate.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../filesys/directory.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../filesys/filehdr.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../filesys/filesys.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../filesys/fstest.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../filesys/openfile.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../filesys/synchdisk.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/disk.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../network/nettest.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../network/post.cc
+g++ -g -Wall -Wshadow -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DUSER_PROGRAM -DVM -DFILESYS_NEEDED -DFILESYS -DNETWORK -DHOST_x86_64 -DHOST_LINUX -DCHANGED -c ../machine/network.cc
+gcc -x assembler-with-cpp -c -P -I../network -I../bin -I../filesys -I../vm -I../userprog -I../threads -I../machine -DHOST_x86_64 -DHOST_LINUX ../threads/switch.s > swtch.s
+g++ main.o scheduler.o synch.o system.o thread.o utility.o threadtest.o interrupt.o stats.o sysdep.o timer.o preemptive.o addrspace.o bitmap.o exception.o progtest.o console.o machine.o mipssim.o translate.o  directory.o filehdr.o filesys.o fstest.o openfile.o synchdisk.o disk.o nettest.o post.o network.o switch.o  -o nachos
+make[1]: Leaving directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/network'
+#cd bin; make all
+cd bin; make coff2noff
+make[1]: Entering directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/bin'
+gcc -I./ -I../threads -DHOST_x86_64 -DHOST_LINUX   -c -o coff2noff.o coff2noff.c
+coff2noff.c: In function ‘Read’:
+coff2noff.c:75:9: warning: implicit declaration of function ‘read’ [-Wimplicit-function-declaration]
+     if (read(fd, buf, nBytes) != nBytes) {
+         ^
+coff2noff.c:77:2: warning: implicit declaration of function ‘unlink’ [-Wimplicit-function-declaration]
+  unlink(noffFileName);
+  ^
+coff2noff.c: In function ‘Write’:
+coff2noff.c:85:9: warning: implicit declaration of function ‘write’ [-Wimplicit-function-declaration]
+     if (write(fd, buf, nBytes) != nBytes) {
+         ^
+coff2noff.c: At top level:
+coff2noff.c:92:1: warning: return type defaults to ‘int’ [-Wimplicit-int]
+ main (int argc, char **argv)
+ ^
+coff2noff.c: In function ‘main’:
+coff2noff.c:162:5: warning: implicit declaration of function ‘lseek’ [-Wimplicit-function-declaration]
+     lseek(fdOut, inNoffFile, 0);
+     ^
+coff2noff.c:170:14: warning: implicit declaration of function ‘strcmp’ [-Wimplicit-function-declaration]
+  } else if (!strcmp(sections[i].s_name, ".text")) {
+              ^
+coff2noff.c:224:5: warning: implicit declaration of function ‘close’ [-Wimplicit-function-declaration]
+     close(fdIn);
+     ^
+gcc coff2noff.o -o coff2noff
+make[1]: Leaving directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/bin'
+cd test; make all
+make[1]: Entering directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/test'
+/usr/local/decstation-ultrix/bin/gcc -G 0 -c -I../userprog -I../threads -mips1 -c halt.c
+make[1]: /usr/local/decstation-ultrix/bin/gcc: Command not found
+Makefile:45: recipe for target 'halt.o' failed
+make[1]: *** [halt.o] Error 127
+make[1]: Leaving directory '/media/nafee/E/nafee/education/buet/operatingSystem/osSessional(CSE314)/nachos/fromTareq/nachos/code/test'
+Makefile:10: recipe for target 'all' failed
+make: *** [all] Error 2

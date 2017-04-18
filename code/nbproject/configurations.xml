@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="100">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <df root="." name="0">
+      <df name="bin">
+        <in>coff2noff.c</in>
+      </df>
+      <df name="filesys">
+        <in>directory.cc</in>
+        <in>filehdr.cc</in>
+        <in>filesys.cc</in>
+        <in>fstest.cc</in>
+        <in>openfile.cc</in>
+        <in>synchdisk.cc</in>
+      </df>
+      <df name="machine">
+        <in>console.cc</in>
+        <in>disk.cc</in>
+        <in>interrupt.cc</in>
+        <in>machine.cc</in>
+        <in>mipssim.cc</in>
+        <in>network.cc</in>
+        <in>stats.cc</in>
+        <in>sysdep.cc</in>
+        <in>timer.cc</in>
+        <in>translate.cc</in>
+      </df>
+      <df name="network">
+        <in>nettest.cc</in>
+        <in>post.cc</in>
+      </df>
+      <df name="threads">
+        <in>main.cc</in>
+        <in>preemptive.cc</in>
+        <in>scheduler.cc</in>
+        <in>synch.cc</in>
+        <in>system.cc</in>
+        <in>thread.cc</in>
+        <in>threadtest.cc</in>
+        <in>utility.cc</in>
+      </df>
+      <df name="userprog">
+        <in>addrspace.cc</in>
+        <in>bitmap.cc</in>
+        <in>exception.cc</in>
+        <in>progtest.cc</in>
+      </df>
+    </df>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+      <itemPath>nbproject/private/launcher.properties</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceFolderFilter>^(nbproject)$</sourceFolderFilter>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Default" type="0">
+      <toolsSet>
+        <compilerSet>default</compilerSet>
+        <dependencyChecking>false</dependencyChecking>
+        <rebuildPropChanged>false</rebuildPropChanged>
+      </toolsSet>
+      <codeAssistance>
+      </codeAssistance>
+      <makefileType>
+        <makeTool>
+          <buildCommandWorkingDir>.</buildCommandWorkingDir>
+          <buildCommand>${MAKE} -f Makefile</buildCommand>
+          <cleanCommand>${MAKE} -f Makefile clean</cleanCommand>
+          <executablePath></executablePath>
+          <cTool>
+            <incDir>
+              <pElem>bin</pElem>
+              <pElem>threads</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>HOST_LINUX</Elem>
+              <Elem>HOST_x86_64</Elem>
+            </preprocessorList>
+          </cTool>
+          <ccTool>
+            <incDir>
+              <pElem>network</pElem>
+              <pElem>bin</pElem>
+              <pElem>filesys</pElem>
+              <pElem>vm</pElem>
+              <pElem>userprog</pElem>
+              <pElem>threads</pElem>
+              <pElem>machine</pElem>
+            </incDir>
+            <preprocessorList>
+              <Elem>CHANGED</Elem>
+              <Elem>FILESYS</Elem>
+              <Elem>FILESYS_NEEDED</Elem>
+              <Elem>HOST_LINUX</Elem>
+              <Elem>HOST_x86_64</Elem>
+              <Elem>NETWORK</Elem>
+              <Elem>USER_PROGRAM</Elem>
+              <Elem>VM</Elem>
+            </preprocessorList>
+          </ccTool>
+        </makeTool>
+        <preBuild>
+          <preBuildCommandWorkingDir>.</preBuildCommandWorkingDir>
+          <preBuildCommand></preBuildCommand>
+        </preBuild>
+      </makefileType>
+      <item path="bin/coff2noff.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="filesys/directory.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="filesys/filehdr.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="filesys/filesys.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="filesys/fstest.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="filesys/openfile.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="filesys/synchdisk.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="machine/console.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="machine/disk.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="machine/interrupt.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="machine/machine.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="machine/mipssim.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="machine/network.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="machine/stats.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="machine/sysdep.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="machine/timer.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="machine/translate.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="network/nettest.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="network/post.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="threads/main.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="threads/preemptive.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="threads/scheduler.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="threads/synch.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="threads/system.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="threads/thread.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="threads/threadtest.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="threads/utility.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="userprog/addrspace.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="userprog/bitmap.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="userprog/exception.cc" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="userprog/progtest.cc" ex="false" tool="1" flavor2="0">
+      </item>
+    </conf>
+  </confs>
+</configurationDescriptor>
