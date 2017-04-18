@@ -14,6 +14,9 @@
 
 #include "copyright.h"
 #include "system.h"
+//#include <bits/stdc++.h>
+#include "synch.h"
+#include "globalBuffer.h"
 
 //----------------------------------------------------------------------
 // SimpleThread
@@ -23,6 +26,49 @@
 //	"name" points to a string with a thread name, just for
 //      debugging purposes.
 //----------------------------------------------------------------------
+
+//struct GlobalBuffer
+//{
+//    long long buf[9999];
+//    long long frontIdx, backIdx, siz;
+//    Lock *lock;
+//    Condition *full, *empty;
+//    GlobalBuffer()
+//    {
+//        frontIdx = backIdx = siz = 0;
+//        lock = new Lock("bufLock");
+//        full = new Condition("full", lock );
+//        empty = new Condition("full", lock);
+//    }
+//    
+//    void insert(long long val, long long who)
+//    {
+//        lock->Acquire();
+//        if ( siz == 10 )
+//        {
+//            full->Wait();
+//        }
+//        buf[ ++siz ] = val;
+//        printf("%lld inserted %lld in idx %lld\n\n", who, val, siz);
+//        empty->Signal();
+//        lock->Release();
+//    }
+//    
+//    long long getNum( long long who )
+//    {
+//        long long ret;
+//        lock->Acquire();
+//        if ( siz == 0 )
+//        {
+//            empty->Wait();
+//        }
+//        ret = buf[ siz-- ];
+//        printf("%lld removed %lld from idx %lld\n\n", who, ret, siz+1);
+//        full->Signal();
+//        lock->Release();
+//        return ret;
+//    }
+//};
 
 void
 SimpleThread(void* name)
@@ -56,6 +102,10 @@ ThreadTest()
 {
     DEBUG('t', "Entering SimpleTest");
 
+    GlobalBuffer *globalBuffer = new GlobalBuffer();
+    
+    printf("globalBuffer->siz = %lld\n\n", globalBuffer->siz );
+    
     for ( int k=1; k<=10; k++) {
       char* threadname = new char[100];
       sprintf(threadname, "Hilo %d", k);
