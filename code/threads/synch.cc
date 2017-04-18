@@ -147,10 +147,49 @@ bool Lock::isHeldByCurrentThread()
     return (currentThread == currentLockHolder);
 }
 
-Condition::Condition(const char* debugName, Lock* conditionLock) { }
-Condition::~Condition() { }
-void Condition::Wait() { ASSERT(false); }
-void Condition::Signal() { }
-void Condition::Broadcast() { }
+Condition::Condition(const char* debugName, Lock* conditionLock)
+{
+    this->name = debugName;
+    this->conditionLock = conditionLock;
+    this->queue = new List<Thread*>;
+}
+Condition::~Condition() 
+{
+    delete this->queue;
+}
+
+void Condition::Wait() 
+{ 
+    //ASSERT(false); Why this ASSERT function is needed?    
+    
+    ASSERT( conditionLock->isHeldByCurrentThread() );
+    IntStatus oldLevel = interrupt->SetLevel(IntOff);	// disable interrupts
+    
+    conditionLock->Release();
+    currentThread->Sleep();
+    					
+    conditionLock->Acquire();
+    interrupt->SetLevel(oldLevel);
+}
+void Condition::Signal() 
+{
+    ASSERT( conditionLock->isHeldByCurrentThread() );
+    Thread *thread;
+
+    thread = queue->Remove();
+    if (thread != NULL)	   // make thread ready
+    {
+        scheduler->ReadyToRun(thread);
+    }
+}
+void Condition::Broadcast() 
+{
+    ASSERT( conditionLock->isHeldByCurrentThread() );
+    Thread *thread;
+    while( thread = queue->Remove() ) // queue->Remove() returns NULL when empty
+    {
+        scheduler->ReadyToRun(thread);
+    }
+}
 
 
