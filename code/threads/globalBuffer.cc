@@ -5,7 +5,7 @@ GlobalBuffer::GlobalBuffer()
     frontIdx = backIdx = siz = 0;
     lock = new Lock("bufLock");
     full = new Condition("full", lock );
-    empty = new Condition("full", lock);
+    empty = new Condition("empty", lock);
 }
     
 void GlobalBuffer::insert(long long val, long long who)

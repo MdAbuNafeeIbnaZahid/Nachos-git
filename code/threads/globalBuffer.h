@@ -1,4 +1,4 @@
-#ifndef GLOBAL_BUFFER
+#ifndef GLOBAL_BUFFER_H
     #define GLOBAL_BUFFER_H
 
 #include "copyright.h"
@@ -25,4 +25,4 @@ struct GlobalBuffer
 
 
 
-#endif
+#endif  // GLOBAL_BUFFER_H

@@ -1,6 +1,7 @@
 #include "copyright.h"
 #include "system.h"
 #include "producer.h"
+#include "thread.h"
 
 void
 produce(void* producer)
@@ -25,6 +26,7 @@ produce(void* producer)
             
         }
         globalBuffer->insert( id, id );
+        //currentThread->Yield();
     }
 }
 
