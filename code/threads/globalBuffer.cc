@@ -11,10 +11,26 @@ GlobalBuffer::GlobalBuffer()
 void GlobalBuffer::insert(long long val, long long who)
 {
     lock->Acquire();
-    if ( siz == 10 )
+    
+    //Faulty implementation
+//    if ( siz == 10 )
+//    {
+//        full->Wait();
+//    }
+    
+    
+    while(1)
     {
-        full->Wait();
+        if ( siz >= 10 )
+        {
+            full->Wait();
+        }
+        else
+        {
+            break;
+        }
     }
+    
     buf[ ++siz ] = val;
     printf("%lld inserted %lld in idx %lld\n\n", who, val, siz);
     empty->Signal();
@@ -25,10 +41,25 @@ long long GlobalBuffer::getNum( long long who )
 {
     long long ret;
     lock->Acquire();
-    if ( siz == 0 )
+    
+    // Faulty implementation
+//    if ( siz == 0 )
+//    {
+//        empty->Wait();
+//    }
+    
+    while(1)
     {
-        empty->Wait();
+        if ( siz <= 0 )
+        {
+            empty->Wait();
+        }
+        else
+        {
+            break;
+        }
     }
+    
     ret = buf[ siz-- ];
     printf("%lld removed %lld from idx %lld\n\n", who, ret, siz+1);
     full->Signal();

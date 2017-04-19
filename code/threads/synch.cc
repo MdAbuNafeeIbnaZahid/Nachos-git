@@ -129,9 +129,9 @@ void Lock::Acquire()
 
 void Lock::Release() 
 {
-    printf("%s is beginning of release lock\n\n", currentThread->getName() );
+//    printf("%s is beginning of release lock\n\n", currentThread->getName() );
     ASSERT(currentThread == currentLockHolder);
-    printf("%s is the lock holder\n\n", currentLockHolder->getName() );
+//    printf("%s is the lock holder\n\n", currentLockHolder->getName() );
     Thread *thread;
     IntStatus oldLevel = interrupt->SetLevel(IntOff);
 
@@ -143,8 +143,8 @@ void Lock::Release()
     }
     else
     {
-        printf("No other thread is waiting for the lock %s\n\n", this->getName());
-        printf("So can't wake anybody up\n\n");
+//        printf("No other thread is waiting for the lock %s\n\n", this->getName());
+//        printf("So can't wake anybody up\n\n");
     }
     isLocked = 0;
     currentLockHolder = NULL;

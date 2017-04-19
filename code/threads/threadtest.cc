@@ -108,7 +108,7 @@ void
 ThreadTest()
 {
     long long a, b, c, d, e;
-    DebugInit( "t" );
+    //DebugInit( "t" );
     DEBUG('t', "Entering SimpleTest");
 
     GlobalBuffer *globalBuffer = new GlobalBuffer();

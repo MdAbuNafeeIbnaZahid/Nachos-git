@@ -9,7 +9,7 @@
 
 struct GlobalBuffer
 {
-    long long buf[9999];
+    long long buf[99999];
     long long frontIdx, backIdx, siz;
     Lock *lock;
     Condition *full, *empty;
