@@ -4,4 +4,29 @@
         <activeConfTypeElem>0</activeConfTypeElem>
         <activeConfIndexElem>0</activeConfIndexElem>
     </data>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/utility.cc</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/globalBuffer.cc</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/thread.cc</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/synch.h</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/scheduler.cc</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/machine/interrupt.cc</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/switch.s</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/system.cc</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/consumer.h</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/producer.cc</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/thread.h</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/scheduler.h</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/switch.h</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/consumer.cc</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/globalBuffer.h</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/synch.cc</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/threadtest.cc</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/producer.h</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/list.h</file>
+            <file>file:/home/nafee/Desktop/Nachos-git/code/threads/utility.h</file>
+        </group>
+    </open-files>
 </project-private>

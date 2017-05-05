@@ -70,11 +70,17 @@
         <in>start.s</in>
       </df>
       <df name="threads">
+        <in>consumer.cc</in>
+        <in>consumer.h</in>
         <in>copyright.h</in>
+        <in>globalBuffer.cc</in>
+        <in>globalBuffer.h</in>
         <in>list.h</in>
         <in>main.cc</in>
         <in>preemptive.cc</in>
         <in>preemptive.h</in>
+        <in>producer.cc</in>
+        <in>producer.h</in>
         <in>scheduler.cc</in>
         <in>scheduler.h</in>
         <in>switch.h</in>

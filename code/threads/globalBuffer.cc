@@ -32,7 +32,7 @@ void GlobalBuffer::insert(long long val, long long who)
     }
     
     buf[ ++siz ] = val;
-    printf("%lld inserted %lld in idx %lld\n\n", who, val, siz);
+    printf("producer %lld inserted %lld in idx %lld\n\n", who, val, siz);
     empty->Signal();
     lock->Release();
 }
@@ -61,7 +61,7 @@ long long GlobalBuffer::getNum( long long who )
     }
     
     ret = buf[ siz-- ];
-    printf("%lld removed %lld from idx %lld\n\n", who, ret, siz+1);
+    printf("consumer %lld removed %lld from idx %lld\n\n", who, ret, siz+1);
     full->Signal();
     lock->Release();
     return ret;

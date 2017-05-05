@@ -188,6 +188,7 @@ void Condition::Wait()
 void Condition::Signal() 
 {
     ASSERT( conditionLock->isHeldByCurrentThread() );
+    IntStatus oldLevel = interrupt->SetLevel(IntOff);
     Thread *thread;
 
     thread = queue->Remove();
@@ -195,15 +196,20 @@ void Condition::Signal()
     {
         scheduler->ReadyToRun(thread);
     }
+    interrupt->SetLevel(oldLevel);
 }
 void Condition::Broadcast() 
 {
     ASSERT( conditionLock->isHeldByCurrentThread() );
+    IntStatus oldLevel = interrupt->SetLevel(IntOff);
+    
     Thread *thread;
     while( thread = queue->Remove() ) // queue->Remove() returns NULL when empty
     {
         scheduler->ReadyToRun(thread);
     }
+    
+    interrupt->SetLevel(oldLevel);
 }
 
 
